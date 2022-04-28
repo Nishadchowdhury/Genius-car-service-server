@@ -92,8 +92,8 @@ async function run() {
                 const cursor = orderCollection.find(query);
                 const orders = await cursor.toArray();
                 res.send(orders)
-            }else{
-                res.status(403).send({message: 'forbidden access 2'})
+            } else {
+                res.status(403).send({ message: 'forbidden access 2' })
             }
         })
 
@@ -104,9 +104,12 @@ async function run() {
             res.send(result);
         })
 
+        app.get('/test', async (req, res) => {
+
+            res.send('update done bro 3:22pm');
+        })
 
 
-        
     }
     finally {
 
